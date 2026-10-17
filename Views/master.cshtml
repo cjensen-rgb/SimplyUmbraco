@@ -1,0 +1,113 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>My-local-shop.com</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f8f8;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            width: 150px;
+            margin-right: 30px;
+        }
+
+        .title-small {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .title-main {
+            font-size: 42px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #555;
+        }
+
+        nav {
+            background: #0f766e;
+            padding: 15px 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            background: #efefef;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <img src="/media/z3tlxca3/ai-genereret-logo.png"
+             alt="My-local-shop.com"
+             class="logo" />
+
+        <div>
+            <div class="title-small">
+                Velkommen til
+            </div>
+
+            <div class="title-main">
+                MY-LOCAL-SHOP.COM
+            </div>
+
+            <div class="tagline">
+                Dit lokale netværk for butikker, fællesskaber og oplevelser
+            </div>
+        </div>
+
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/find-og-vaelg-dit-distrikt">Find og vælg dit distrikt</a>
+        <a href="/for-butikker">For butikker</a>
+    </nav>
+
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        © My-local-shop.com
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@foreach(var district in districts)
+{
+<tr>
+    <td>
+        <a href="/district/@district.DistrictID">
+            @district.DistrictName
+        </a>
+    </td>
+
+    <td>
+        @district.ActiveFrom?.ToString("MMM yyyy")
+    </td>
+
+    <td>
+        <strong>@district.StatusText</strong>
+    </td>
+</tr>
+}

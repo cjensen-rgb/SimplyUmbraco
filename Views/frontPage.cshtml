@@ -1,0 +1,30 @@
+﻿<h1>TEST FRONTPAGE</h1>
+@{
+	Layout = "master.cshtml";
+}
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<section class="fact-boxes">
+
+    <div class="fact-box">
+        <h3>Find lokale butikker</h3>
+        <p>@Model.Value("findLokaleButikker")</p>
+    </div>
+
+    <div class="fact-box">
+        <h3>Støt dit lokalsamfund</h3>
+        <p>@Model.Value("stotDitLokalsamfund")</p>
+    </div>
+
+    <div class="fact-box">
+        <h3>Én indgang til kultur og det lokale erhvervsliv</h3>
+        <p>@Model.Value("enIndgangTilKulturOgDetLokaleErhvervsliv")</p>
+    </div>
+
+</section>
+
+<section class="community-banner">
+    <div class="community-content">
+        @Html.Raw(Model.Value("faellesskabTekst"))
+    </div>
+</section>
