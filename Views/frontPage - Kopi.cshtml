@@ -1,0 +1,29 @@
+﻿@{
+	Layout = "master.cshtml";
+}
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+<section class="fact-boxes">
+
+    <div class="fact-box">
+        <h3>@Model.Value("Boks1Overskrift")</h3>
+        <p>@Model.Value("Boks1Tekst")</p>
+    </div>
+
+    <div class="fact-box">
+        <h3>@Model.Value("Boks2Overskrift")</h3>
+        <p>@Model.Value("Boks2Tekst")</p>
+    </div>
+
+    <div class="fact-box">
+        <h3>@Model.Value("Boks3Overskrift")</h3>
+        <p>@Model.Value("Boks3Tekst")</p>
+    </div>
+
+</section>
+
+<section class="community-banner">
+    <div class="community-content">
+        @Html.Raw(Model.Value("faellesskabTekst"))
+    </div>
+</section>

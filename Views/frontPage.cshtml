@@ -1,25 +1,11 @@
-﻿<h1>TEST GITHUB SYNC</h1>
-@{
-	Layout = "master.cshtml";
+﻿@{
+    Layout = "master.cshtml";
 }
 @using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 <section class="fact-boxes">
 
-    <div class="fact-box">
-        <h3>Find lokale butikker</h3>
-        <p>@Model.Value("findLokaleButikker")</p>
-    </div>
-
-    <div class="fact-box">
-        <h3>Støt dit lokalsamfund</h3>
-        <p>@Model.Value("stotDitLokalsamfund")</p>
-    </div>
-
-    <div class="fact-box">
-        <h3>Én indgang til kultur og det lokale erhvervsliv</h3>
-        <p>@Model.Value("enIndgangTilKulturOgDetLokaleErhvervsliv")</p>
-    </div>
+    @await Html.GetBlockGridHtmlAsync(Model, "faktabokse")
 
 </section>
 
